@@ -1,0 +1,49 @@
+[user]
+	name = Ted Hudek
+	email = tedhudek@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[push]
+	default = simple
+[color "status"]
+	changed = cyan normal bold
+	untracked = cyan normal bold
+[core]
+	excludesfile = .\\.gitignore_global
+	editor = atom --wait
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	path = c:/Program Files/Beyond Compare 4/BCompare.exe
+	cmd = \"c:\\program files\\beyond compare 4\\bcompare.exe\" \"$LOCAL\" \"$REMOTE\"
+[color]
+	interactive = false
+
+
+
+[color "diff"]
+	old = cyan normal bold
+[color "branch"]
+	remote = cyan normal bold
+[color "branch"] 
+  current = yellow bold
+
+
+
+[credential]
+	helper = manager
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+[mergetool]
+	keepBackup = false
+[alias]
+	ls = log --pretty='%C(bold yellow)%h%C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate
+    ll = log --pretty='%C(bold yellow)%h%C(bold green)%d %Creset%s%C(bold cyan) [%cn]' --decorate --numstat
+	lds = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate --date=short
+	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate --date=relative
+	diffdir = difftool --dir-diff --tool=bc3 --no-prompt
+
