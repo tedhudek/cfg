@@ -55,3 +55,7 @@
 	rbc = rebase --continue
 	co = checkout
 	st = status
+	lup = "!git fetch -p --all" && "git merge --ff-only @{u}"
+	up = pull --all --ff-only -v
+[fetch]
+	prune = true
