@@ -55,7 +55,8 @@
 	rbc = rebase --continue
 	co = checkout
 	st = status
-	lup = "!git fetch -p --all" && "git merge --ff-only @{u}"
+	mgl = "!git co live" && "git merge origin/live" && "git merge master" && "git push" && "git co master"
+	pg = push gh-public master
 	up = pull --all --ff-only -v
 [fetch]
 	prune = true
