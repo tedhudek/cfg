@@ -22,17 +22,14 @@
 [color]
 	interactive = false
 
-[rebase]
-	autosquash = true
-
 [color "diff"]
 	old = cyan normal bold
 [color "branch"]
 	remote = cyan normal bold
 [color "branch"]
   current = yellow bold
-
-
+[color "branch"]
+    upstream = yellow blue
 
 [credential]
 	helper = manager
@@ -49,14 +46,17 @@
 	lds = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate --date=short
 	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate --date=relative
 	diffdir = difftool --dir-diff --tool=bc3 --no-prompt
+	d = diff
 	ds = diff --stat
-	di = diff --staged
+	dc = diff --cached
 	new = log master.. --reverse
 	rbc = rebase --continue
 	co = checkout
+	cob = checkout -b
 	st = status
 	mgl = "!git co live" && "git merge origin/live" && "git merge master" && "git push" && "git co master"
-	pg = push gh-public master
-	up = pull --all --ff-only -v
+	pg = push gh-public master:staging
+	up = pull --all --ff-only
+	rl = rev-list --left-right --count master...gh-public/staging
 [fetch]
 	prune = true

@@ -10,3 +10,4 @@ $global:GitPromptSettings.LocalWorkingStatusForegroundBrightColor  = [ConsoleCol
 $global:GitPromptSettings.BranchBehindStatusForegroundColor  = [ConsoleColor]::Yellow
 $global:GitPromptSettings.AfterStashForegroundColor  = [ConsoleColor]::Yellow
 $global:GitPromptSettings.StashForegroundColor  = [ConsoleColor]::Yellow
+$global:GitPromptSettings.BranchUntrackedSymbol = '!'
