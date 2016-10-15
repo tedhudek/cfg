@@ -4,8 +4,6 @@
 
 
     
-    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation">
-    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool.">
     <title>Git for Writers</title>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
@@ -126,148 +124,99 @@ layout: true
 class: center, middle, inverse
 ---
 #Git for writers
-Basic workflows in CPub
-Created with {Remark.js} (link)
+Basic workflows in CPub  
+Created with [{Remark.js}](https://github.com/gnab/remark)
 .footnote[Go to [resources](https://github.com/tedhudek)]
 ---
-## What is it and why should I be using it?
+## What is so cool about Git, seriously?
 ---
 layout: false
 .left-column[
-  ## What is it?
+  ## Think local
 ]
 .right-column[
-  A simple, in-browser, Markdown-driven slideshow tool targeted at people who know their way around HTML and CSS, featuring:
+  You have everything on your computer that is on the server. All the files, all the history.
+  
+  - Almost all ops are local.
 
-- Markdown formatting, with smart extensions
+  - Each commit is a snapshot of all files
 
-- Presenter mode, with cloned slideshow view
+  - When you change branches, Git updates all files in working directory
 
-- Syntax highlighting, supporting a range of languages
-
-- Slide scaling, thus similar appearance on all devices / resolutions .red[*]
-
-- Touch support for smart phones and pads, i.e. swipe to navigate slides
-
-.footnote[.red[*] At least browsers try their best]
+  - Commit sequence like a stream of snapshots
 ]
 ---
 .left-column[
-  ## What is it?
-  ## Why use it?
+  ## Think local
+  ## Act local
 ]
 .right-column[
-If your ideal slideshow creation workflow contains any of the following steps:
+You want to work locally.  How do you work in a feature branch, stage your content for review, and publish externally?  
 
-- Just write what's on your mind
+It's pretty simple, really:
 
-- Do some basic styling
+  - Creating a working branch
 
-- Easily collaborate with others
+  - Make some commits
 
-- Share with and show to everyone
+  - Verify it looks good on stage
 
-Then remark might be perfect for your next.red[*] slideshow!
-
-.footnote[.red[*] You probably want to convert existing slideshows as well]
-]
----
-.left-column[
-  ## What is it?
-  ## Why use it?
-]
-.right-column[
-As the slideshow is expressed using Markdown, you may:
-
-- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
-
-As the slideshow is actually an HTML document, you may:
-
-- Display it in any decent browser
-
-- Style it using regular CSS, just like any other HTML content
-
-- Use it offline!
-
-As the slideshow is contained in a plain file, you may:
-
-- Store it wherever you like; on your computer, hosted from your Dropbox, hosted on Github Pages alongside the stuff you're presenting...
-
-- Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
+  - Merge into master
 ]
 ---
 template: inverse
 
-## How does it work, then?
+## Let's give it a try
 ---
 name: how
 
 .left-column[
-  ## How does it work?
-### - Markdown
+## Update your clone 
 ]
 .right-column[
 A Markdown-formatted chunk of text is transformed into individual slides by JavaScript running in the browser:
 
-```remark
-# Slide 1
-This is slide 1
-
----
-
-# Slide 2
-This is slide 2
+```
+git checkout master
+git pull
+# What does pull really do?
 ```
 
-.slides[
-  .first[
-  ### Slide 1
-  This is slide 1
-  ]
-  .second[
-  ### Slide 2
-  This is slide 2
-  ]
-]
+Pull = fetch followed by merge
 
-Regular Markdown rules apply with only a single exception:
+Ok, what does fetch do?
 
-  - A line containing three dashes constitutes a new slide
-  (not a horizontal rule, `&lt;hr /&gt;`)
+- Updates all *remote-tracking branches*
 
-Have a look at the [Markdown website](http://daringfireball.net/projects/markdown/) if you're not familiar with Markdown formatting.
+- `git branch -r`
+
+But the merge is only into the current branch.
+
+- `git status` to see *upstream branch* for your *local tracking branch*
 ]
 ---
 .left-column[
-  ## How does it work?
-  ### - Markdown
-  ### - Inside HTML
+  ## Update your clone
+  ## Create a feature branch
 ]
 .right-column[
-A simple HTML document is needed for hosting the styles, Markdown and the generated slides themselves:
-
-```xml
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;style type="text/css"&gt;
-      /* Slideshow styles */
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-*    &lt;textarea id="source"&gt;
-      &lt;!-- Slideshow Markdown --&gt;
-    &lt;/textarea&gt;
-*    &lt;script src="remark.js"&gt;
-    &lt;/script&gt;
-    &lt;script&gt;
-*      var slideshow = remark.create();
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+```
+git checkout -b new-feature
+# does two things
 ```
 
-You may download remark to have your slideshow not depend on any online resources, or reference the [latest version](http://remarkjs.com/downloads/remark-latest.min.js) online directly.
+Creates a new branch based on the current one, and checks it out (switches into it)
+
+Now what?
+```
+# repeat this sequence as much as needed
+git add .
+# what does add actually do?
+git commit -m "useful message"
+# what does commit do?
+
+In Git, you have a working directory, a staging area, and commit objects.
+
 ]
 ---
 template: inverse
@@ -289,58 +238,46 @@ To help out with slide layout and formatting, a few Markdown extensions have bee
 
 ---
 .left-column[
-  ## Markdown extensions
-  ### - Slide properties
+  ## I'm done, how do I merge to master?
 ]
 .right-column[
-Initial lines containing key-value pairs are extracted as slide properties:
+	When ready to move to master:
 
-```remark
-name: agenda
-class: middle, center
+```
+		git checkout master
+		git pull (fetch+merge)
+		git checkout feature
+		git merge master
+		git push
+		# wait for build success mail
+		git checkout master
+		git pull # shouldn't be anything here but just in case
+		git merge feature
+		git push
+		# optionally, delete feature, both from your clone and the server repo
+		git branch -d feature
+		git push -u origin :feature 
 
-# Agenda
-
-The name of this slide is {{ name }}.
 ```
 
-Slide properties serve multiple purposes:
-
-* Naming and styling slides using properties `name` and `class`
-
-* Using slides as templates using properties `template` and `layout`
-
-* Expansion of `{{ property }}` expressions to property values
-
-See the [complete list](https://github.com/gnab/remark/wiki/Markdown#slide-properties) of slide properties.
 ]
 ---
 .left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
+  ## 	I committed in master by mistake.  
 ]
 .right-column[
-Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
+What should I do?
 
-```remark
-.footnote[.red.bold[*] Important footnote]
 ```
-
-Resulting HTML extract:
-
-```xml
-&lt;span class="footnote"&gt;
-  &lt;span class="red bold"&gt;*&lt;/span&gt; Important footnote
-&lt;/span&gt;
+		git checkout -b feature
+		# continue working
+		git checkout master
+		git reset --hard HEAD^ # WARNING: hard will wipe out any changed files.  
 ```
 ]
 ---
 .left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-  ### - Syntax Highlighting
+  ## Using log
 ]
 .right-column[
 Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
