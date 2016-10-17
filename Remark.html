@@ -208,12 +208,12 @@ git checkout -b new-feature
 Creates a new branch based on the current one, and checks it out (switches into it)
 
 Now what?
+
 ```
-# repeat this sequence as much as needed
 git add .
-# what does add actually do?
 git commit -m "useful message"
-# what does commit do?
+# what do add and commit actually do?
+```
 
 In Git, you have a working directory, a staging area, and commit objects.
 
@@ -221,43 +221,30 @@ In Git, you have a working directory, a staging area, and commit objects.
 ---
 template: inverse
 
-## Of course, Markdown can only go so far.
+## I'm done, how do I merge to master?
 ---
 .left-column[
-  ## Markdown extensions
+  ## Merging
 ]
 .right-column[
-To help out with slide layout and formatting, a few Markdown extensions have been included:
-
-- Slide properties, for naming, styling and templating slides
-
-- Content classes, for styling specific content
-
-- Syntax highlighting, supporting a range of languages
-]
-
----
-.left-column[
-  ## I'm done, how do I merge to master?
-]
-.right-column[
-	When ready to move to master:
+	Here's what to do:
 
 ```
-		git checkout master
-		git pull (fetch+merge)
-		git checkout feature
-		git merge master
-		git push
-		# wait for build success mail
-		git checkout master
-		git pull # shouldn't be anything here but just in case
-		git merge feature
-		git push
-		# optionally, delete feature, both from your clone and the server repo
-		git branch -d feature
-		git push -u origin :feature 
+git checkout master
+git pull (fetch+merge)
+git checkout feature
+git merge master
+git push
+# wait for build success mail
 
+git checkout master
+git pull # shouldn't be anything here but just in case
+git merge feature
+git push
+
+# at this point you can optionally delete feature
+git branch -d feature
+git push -u origin :feature 
 ```
 
 ]
@@ -269,10 +256,11 @@ To help out with slide layout and formatting, a few Markdown extensions have bee
 What should I do?
 
 ```
-		git checkout -b feature
-		# continue working
-		git checkout master
-		git reset --hard HEAD^ # WARNING: hard will wipe out any changed files.  
+git checkout -b feature
+# continue working
+git checkout master
+git reset --hard HEAD^
+# WARNING: hard will wipe out any changed files.  
 ```
 ]
 ---
@@ -280,28 +268,16 @@ What should I do?
   ## Using log
 ]
 .right-column[
-Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
 
-Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
+```
+git log -5
+# HINT: try aliases for log
 
-.pull-left[
-
-&lt;pre&gt;&lt;code&gt;```javascript
-function add(a, b)
-  return a + b
-end
-```&lt;/code&gt;&lt;/pre&gt;
-]
-.pull-right[
-
-&lt;pre&gt;&lt;code&gt;```ruby
-def add(a, b)
-  a + b
-end
-```&lt;/code&gt;&lt;/pre&gt;
-]
-
-A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration#highlighting) are available, including several well-known themes from different editors and IDEs.
+git config -e --global
+alias.ls=log --pretty='%C(bold yellow)%h%C(bold green)
+     %d %Creset%s%C(bold cyan) [%cn]' --decorate
+# output includes branch tags
+```
 
 ]
 ---
@@ -329,25 +305,7 @@ Just like three dashes separate slides,
 three question marks separate slide content from slide notes:
 
 ```
-Slide 1 content
 
-*???
-
-Slide 1 notes
-
----
-
-Slide 2 content
-
-*???
-
-Slide 2 notes
-```
-
-Slide notes are also treated as Markdown, and will be converted in the
-same manner slide content is.
-
-Pressing __P__ will toggle presenter mode.
 ]
 ???
 Congratulations, you just toggled presenter mode!
@@ -360,18 +318,7 @@ Now press __P__ to toggle it back off.
   ### - Cloned view
 ]
 .right-column[
-Presenter mode of course makes no sense to the audience.
 
-Creating a cloned view of your slideshow lets you:
-
-- Move the cloned view to the extended display visible to the audience
-
-- Put the original slideshow in presenter mode
-
-- Navigate as usual, and the cloned view will automatically keep up with the original
-
-Pressing __C__ will open a cloned view of the current slideshow in a new
-browser window.
 ]
 ---
 template: inverse
