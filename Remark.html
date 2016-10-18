@@ -258,7 +258,8 @@ git checkout -b feature
 # continue working
 git checkout master
 git reset --hard HEAD^
-# WARNING: hard will wipe out any changed files.  
+# HEAD^ means parent of HEAD
+# WARNING: --hard wipes out any changed files.  
 ```
 ]
 ---
@@ -318,14 +319,15 @@ This way you can commit all you want on your local, and then pack your work into
 ]
 .right-column[
 
-You can work in either the public GitHub or the private VSO repo.
+- You can work in either the public GitHub or the private VSO repo.
 
-When a PR arrives in GitHub, we @-mention the owner, and they iterate.
+- Only requirement: internal confidential prerelease must go on VSO
 
-Only requirement: internal confidential prerelease must go on VSO
-Using GitHub actually helpful if using HTML or tables because rendering is closer to OP.
+- Using GitHub actually helpful if using HTML or tables because rendering is closer to OP.
 
-For now, Ted syncs the two, typically at least once a day.
+- When a PR arrives in GitHub, we @-mention the owner, and they iterate.
+
+- For now, Ted syncs *vso/master* and *gh-public/staging*, typically at least once a day.
 
 ]
 .right-column[
