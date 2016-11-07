@@ -58,5 +58,6 @@
 	pg = push gh-public master:staging
 	up = pull --all --ff-only
 	rl = rev-list --left-right --count master...gh-public/staging
+	mu = merge '@{u}'
 [fetch]
 	prune = true
