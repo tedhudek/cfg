@@ -12,7 +12,7 @@
 	untracked = cyan normal bold
 [core]
 	excludesfile = .\\.gitignore_global
-	editor = code
+	editor = code --wait
 [diff]
 	tool = bc3
 [difftool "bc3"]
@@ -41,10 +41,9 @@
 	keepBackup = false
 	prompt = false
 [alias]
-	ls = log --pretty='%C(bold yellow)%h%C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate
-    ll = log --pretty='%C(bold yellow)%h%C(bold green)%d %Creset%s%C(bold cyan) [%cn]' --decorate --numstat
-	lds = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate --date=short
-	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%cn]' --decorate --date=relative
+	ls = log --pretty='%C(bold yellow)%h%C(bold green) %d %Creset%s%C(bold cyan) [%an]' --decorate
+    ll = log --pretty='%C(bold yellow)%h%C(bold green)%d %Creset%s%C(bold cyan) [%an]' --decorate --numstat
+	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%an]' --decorate --date=default-local
 	diffdir = difftool --dir-diff --tool=bc3 --no-prompt
 	d = diff
 	ds = diff --stat
@@ -53,11 +52,13 @@
 	rbc = rebase --continue
 	co = checkout
 	cob = checkout -b
+	c = commit -am
+	f = fetch --all
+	p = push
 	st = status
 	mgl = "!git co live" && "git merge origin/live" && "git merge master" && "git push" && "git co master"
 	pg = push gh-public master:staging
-	up = pull --all --ff-only
-	rl = rev-list --left-right --count master...gh-public/staging
+	lr = log --left-right master...gh-public/staging --oneline
 	mu = merge '@{u}'
 [fetch]
 	prune = true
