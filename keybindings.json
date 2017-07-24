@@ -16,6 +16,9 @@
  { "key": "f12", 
   "command": "markdown.showPreviewToSide",
  "when": "editorFocus" },
+ { "key": "f10", 
+  "command": "extension.poplink",
+ "when": "editorFocus" },
  { "key": "ctrl+shift+right",        "command": "workbench.action.moveEditorToNextGroup" },
 { "key": "ctrl+shift+left",         "command": "workbench.action.moveEditorToPreviousGroup" }
 ]
