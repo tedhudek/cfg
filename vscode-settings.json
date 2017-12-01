@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite the default settings
+{
+	"editor.wrappingColumn": 0,
+    	"editor.quickSuggestions": false,
+        	"editor.cursorBlinking": "visible",
+            	"editor.selectionHighlight": false,
+    "editor.wordBasedSuggestions": false,
+    "workbench.activityBar.visible": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "workbench.statusBar.visible": true,
+    "powershell.startAutomatically": true,
+    "powershell.enableProfileLoading": true,
+    "git.confirmSync": false,
+    "editor.autoClosingBrackets": false,
+    "typescript.check.npmIsInstalled": false,
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "newUntitledFile",
+    "git.enableSmartCommit": true,
+    "popLink.localBasePath": "c:\\repo\\drivers\\windows-driver-docs-pr\\",
+    "popLink.remoteBasePath": "https://docs.microsoft.com/windows-hardware/drivers/",
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "python.pythonPath": "c:/python27/python.exe",
+    "workbench.editor.labelFormat": "medium",
+    "python.linting.pylintArgs": [
+        "--errors-only"
+    ],
+    "workbench.panel.location": "right"
+}
+
