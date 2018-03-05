@@ -14,10 +14,9 @@
 	excludesfile = .\\.gitignore_global
 	editor = code --wait
 [diff]
-	tool = bc3
-[difftool "bc3"]
-	path = c:/Program Files/Beyond Compare 4/BCompare.exe
-	cmd = \"c:\\program files\\beyond compare 4\\bcompare.exe\" \"$LOCAL\" \"$REMOTE\"
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 	prompt = false
 [color]
 	interactive = false
@@ -41,9 +40,9 @@
 	keepBackup = false
 	prompt = false
 [alias]
-	ls = log --pretty='%C(bold yellow)%h%C(bold green) %d %Creset%s%C(bold cyan) [%an]' --decorate
-    ll = log --pretty='%C(bold yellow)%h%C(bold green)%d %Creset%s%C(bold cyan) [%an]' --decorate --numstat
-	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%an]' --decorate --date=default-local
+	ls = log --pretty='%C(bold yellow)%h%C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate
+    ll = log --pretty='%C(bold yellow)%h%C(bold green)%d %Creset%s%C(bold cyan) [%ae]' --decorate --numstat
+	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local
 	diffdir = difftool --dir-diff --tool=bc3 --no-prompt
 	d = diff
 	ds = diff --stat
@@ -54,11 +53,15 @@
 	cob = checkout -b
 	c = commit -am
 	f = fetch --all
+	conflicts = diff --name-only --diff-filter=U
 	p = push
 	st = status
 	mgl = "!git co live" && "git merge origin/live" && "git merge master" && "git push" && "git co master"
 	pg = push gh-public master:staging
-	lr = log --left-right master...gh-public/staging --oneline
+	lrm = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local --left-only master...gh-public/staging
+	lrs = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local --right-only master...gh-public/staging
 	mu = merge '@{u}'
 [fetch]
 	prune = true
+[winUpdater]
+	recentlySeenVersion = 2.16.2.windows.1
