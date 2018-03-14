@@ -43,7 +43,7 @@
 	ls = log --pretty='%C(bold yellow)%h%C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate
     ll = log --pretty='%C(bold yellow)%h%C(bold green)%d %Creset%s%C(bold cyan) [%ae]' --decorate --numstat
 	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local
-	diffdir = difftool --dir-diff --tool=bc3 --no-prompt
+	diffdir = difftool --dir-diff --no-prompt
 	d = diff
 	ds = diff --stat
 	dc = diff --cached
