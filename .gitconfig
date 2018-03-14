@@ -14,10 +14,9 @@
 	excludesfile = .\\.gitignore_global
 	editor = code --wait
 [diff]
-	tool = bc3
-[difftool "bc3"]
-	path = c:/Program Files/Beyond Compare 4/BCompare.exe
-	cmd = \"c:\\program files\\beyond compare 4\\bcompare.exe\" \"$LOCAL\" \"$REMOTE\"
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 	prompt = false
 [color]
 	interactive = false
