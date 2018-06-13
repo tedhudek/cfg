@@ -57,11 +57,11 @@
 	p = push
 	st = status
 	mgl = "!git co live" && "git merge origin/live" && "git merge master" && "git push" && "git co master"
-	pg = push gh-public master:staging
 	lrm = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local --left-only master...gh-public/staging
 	lrs = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local --right-only master...gh-public/staging
 	mu = merge '@{u}'
+	mx = "!git merge gh-public/staging" && "git push gh-public master:staging"
 [fetch]
 	prune = true
 [winUpdater]
-	recentlySeenVersion = 2.16.2.windows.1
+	recentlySeenVersion = 2.17.1.windows.2
