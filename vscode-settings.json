@@ -26,6 +26,8 @@
     "workbench.panel.location": "right",
     "editor.minimap.enabled": false,
     "team.showWelcomeMessage": false,
+    "breadcrumbs.enabled": true,
+    "window.menuBarVisibility": "default",
     "git.autofetch": true
 }
 
