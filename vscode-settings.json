@@ -1,4 +1,3 @@
-// Place your settings in this file to overwrite the default settings
 {
 	"editor.wrappingColumn": 0,
     	"editor.quickSuggestions": false,
@@ -24,6 +23,9 @@
     "python.linting.pylintArgs": [
         "--errors-only"
     ],
-    "workbench.panel.location": "right"
+    "workbench.panel.location": "right",
+    "editor.minimap.enabled": false,
+    "team.showWelcomeMessage": false,
+    "git.autofetch": true
 }
 
