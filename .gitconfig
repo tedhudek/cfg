@@ -45,6 +45,7 @@
 	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local
 	diffdir = difftool --dir-diff --no-prompt
 	d = diff
+	df=diff --ws-error-highlight=all
 	ds = diff --stat
 	dc = diff --cached
 	new = log master.. --reverse
