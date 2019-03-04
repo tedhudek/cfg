@@ -13,6 +13,7 @@
 [core]
 	excludesfile = .\\.gitignore_global
 	editor = code --wait
+	commitGraph = true
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
@@ -45,7 +46,6 @@
 	ld = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local
 	diffdir = difftool --dir-diff --no-prompt
 	d = diff
-	df=diff --ws-error-highlight=all
 	ds = diff --stat
 	dc = diff --cached
 	new = log master.. --reverse
@@ -62,7 +62,10 @@
 	lrs = log --pretty='%C(bold yellow)%h%C(bold yellow) %ad %C(bold green) %d %Creset%s%C(bold cyan) [%ae]' --decorate --date=default-local --right-only master...gh-public/staging
 	mu = merge '@{u}'
 	mx = "!git merge gh-public/staging" && "git push gh-public master:staging"
+	lg = log --oneline --graph
 [fetch]
 	prune = true
 [winUpdater]
-	recentlySeenVersion = 2.18.0.windows.1
+	recentlySeenVersion = 2.19.1.windows.1
+[gc]
+	writeCommitGraph = true
