@@ -74,7 +74,6 @@
             "remote": true,
             "stash": true
         }
-    },
-    "gitlens.views.search.enabled": false
+    }
 }
 
