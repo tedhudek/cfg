@@ -27,6 +27,13 @@
 
      { "key": "ctrl+shift+right",        "command": "workbench.action.moveEditorToNextGroup" },
 
-    { "key": "ctrl+shift+left",         "command": "workbench.action.moveEditorToPreviousGroup" }
-    ]
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "gitlens.views.repositories:gitlens.focus"
+    }
+]
     
