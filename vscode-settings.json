@@ -1,8 +1,10 @@
 {
+    "customizeUI.stylesheet": {
+        ".editor-actions": "display: none !important;",
+      },
 	"editor.wrappingColumn": 0,
     	"editor.quickSuggestions": false,
-        	"editor.cursorBlinking": "visible",
-            	"editor.selectionHighlight": false,
+            "editor.cursorBlinking": "visible",
     "editor.wordBasedSuggestions": false,
     "workbench.activityBar.visible": false,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -17,8 +19,7 @@
     "git.enableSmartCommit": true,
     "popLink.localBasePath": "c:\\repo\\drivers\\windows-driver-docs-pr\\",
     "popLink.remoteBasePath": "https://docs.microsoft.com/windows-hardware/drivers/",
-    "python.pythonPath": "c:/python27/python.exe",
-    "workbench.editor.labelFormat": "medium",
+    "python.pythonPath": "C:\\Users\\tedhudek\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
     "python.linting.pylintArgs": [
         "--errors-only"
     ],
@@ -29,22 +30,18 @@
     "window.menuBarVisibility": "default",
     "git.autofetch": true,
     "gitlens.gitExplorer.files.layout": "list",
-    "workbench.colorTheme": "Tomorrow Night Blue",
     "[markdown]":  {
         "editor.quickSuggestions": true
     },
     "window.zoomLevel": 0,
     "editor.renderWhitespace": "all",
     "gitlens.hovers.currentLine.over": "line",
-    "gitlens.currentLine.enabled": false,
     "gitlens.blame.heatmap.enabled": false,
     "gitlens.blame.highlight.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "gitlens.hovers.currentLine.enabled": false,
     "gitlens.hovers.annotations.enabled": false,
-    "gitlens.hovers.enabled": false,
     "gitlens.statusBar.enabled": false,
     "gitlens.keymap": "alternate",
     "gitlens.defaultDateStyle": "absolute",
@@ -52,9 +49,15 @@
     "gitlens.blame.avatars": false,
     "gitlens.advanced.fileHistoryFollowsRenames": false,
     "gitlens.menus": {
-        "editor": false,
+        "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "details": false,
+            "history": false,
+            "remote": true
+        },
         "editorGroup": false,
-        "editorTab": false,
         "explorer": {
             "clipboard": true,
             "compare": true,
@@ -74,6 +77,78 @@
             "remote": true,
             "stash": true
         }
+    },
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.views.repositories.files.layout": "tree",
+    "diffEditor.renderSideBySide": false,
+    "editor.selectionHighlight": false,
+    "editor.occurrencesHighlight": false,
+    "merge-conflict.diffViewPosition": "Below",
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#b52e31"
+        },
+        {
+            "name": "Auth0 Orange",
+            "value": "#eb5424"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "C# Purple",
+            "value": "#68217A"
+        },
+        {
+            "name": "Gatsby Purple",
+            "value": "#639"
+        },
+        {
+            "name": "Go Cyan",
+            "value": "#5dc9e2"
+        },
+        {
+            "name": "Java Blue-Gray",
+            "value": "#557c9b"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#00b3e6"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "files.autoSave": "afterDelay",
+    "powershell.promptToUpdatePowerShell": false,
+    "peacock.affectActivityBar": false,
+    "peacock.affectStatusBar": false,
+    "peacock.affectTitleBar": false,
+    "workbench.colorTheme": "Cobalt2",
+    "synthwave84.disableGlow": true,
+    "editor.fontLigatures": false,
+    "workbench.colorCustomizations": {
+        "editor.findMatchHighlightBackground": "#f3e30895"
     }
 }
 
