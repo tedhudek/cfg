@@ -1,6 +1,8 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "alwaysShowTabs" : true,
+        "tabWidthMode": "equal",
+
     "defaultProfile" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "initialCols" : 120,
     "initialRows" : 30,
@@ -29,7 +31,25 @@
             [
                 "ctrl+shift+1"
             ]
-        }
+        },
+        {
+            "command" : "toggleFocusMode",
+            "keys" : 
+            [
+                "ctrl+shift+z"
+            ]
+        },
+        { "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+1" },
+        { "command": { "action": "newTab", "index": 1 }, "keys": "ctrl+2" },
+        { "command": { "action": "newTab", "index": 2 }, "keys": "ctrl+3" },
+        { "command": { "action": "newTab", "index": 3 }, "keys": "ctrl+4" },
+        { "command": { "action": "newTab", "index": 4 }, "keys": "ctrl+5" },
+        { "command": { "action": "newTab", "index": 5 }, "keys": "ctrl+6" },
+        { "command": { "action": "newTab", "index": 6 }, "keys": "ctrl+7" },
+        { "command": { "action": "newTab", "index": 7 }, "keys": "ctrl+8" },
+        { "command": { "action": "newTab", "index": 8 }, "keys": "ctrl+9" },
+        { "command": "commandPalette","keys": "ctrl+shift+p" },
+        { "command": "togglePaneZoom" ,"keys":"ctrl+shift+z"}
     ],
     "requestedTheme" : "system",
     "showTabsInTitlebar" : true,
@@ -40,6 +60,8 @@
             "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "name": "Windows PowerShell",
             "commandline": "powershell.exe",
+            "backgroundImage": "C:/temp/D5B_Ho1UwAAJziI.jpg",
+            "backgroundImageOpacity" : 0.2,
             "hidden": false,
             "startingDirectory": "%USERPROFILE%",
             "closeOnExit": "graceful",
@@ -57,7 +79,7 @@
         {
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
             "name": "cmd",
-            "commandline": "cmd.exe",
+            "commandline": "cmd.exe",   
             "hidden": false,
             "startingDirectory": "%USERPROFILE%",
             "closeOnExit": "graceful",
@@ -94,6 +116,12 @@
             "padding": "8, 8, 8, 8",
             "snapOnInput": true,
             "useAcrylic": false
+        },
+        {
+            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+            "hidden": false,
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl"
         }
     ],
     "schemes" : 

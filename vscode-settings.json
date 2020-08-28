@@ -6,7 +6,7 @@
     	"editor.quickSuggestions": false,
             "editor.cursorBlinking": "visible",
     "editor.wordBasedSuggestions": false,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
     "workbench.statusBar.visible": true,
     "powershell.startAutomatically": true,
@@ -19,6 +19,10 @@
     "git.enableSmartCommit": true,
     "popLink.localBasePath": "c:\\repo\\drivers\\windows-driver-docs-pr\\",
     "popLink.remoteBasePath": "https://docs.microsoft.com/windows-hardware/drivers/",
+    "popLink.localRefPath": "c:\\repo\\wdk-ddi\\wdk-ddi-src\\content\\",
+    "popLink.remoteRefPath": "https://docs.microsoft.com/windows-hardware/drivers/ddi/",
+    "linkRecommender.pathToRootRepoDirectory": "C:\\repo\\drivers",
+    "linkRecommender.GithubUrlToDocSet": "https://github.com/MicrosoftDocs/windows-driver-docs-pr",
     "python.pythonPath": "C:\\Users\\tedhudek\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
     "python.linting.pylintArgs": [
         "--errors-only"
@@ -85,70 +89,19 @@
     "editor.selectionHighlight": false,
     "editor.occurrencesHighlight": false,
     "merge-conflict.diffViewPosition": "Below",
-    "peacock.favoriteColors": [
-        {
-            "name": "Angular Red",
-            "value": "#b52e31"
-        },
-        {
-            "name": "Auth0 Orange",
-            "value": "#eb5424"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "C# Purple",
-            "value": "#68217A"
-        },
-        {
-            "name": "Gatsby Purple",
-            "value": "#639"
-        },
-        {
-            "name": "Go Cyan",
-            "value": "#5dc9e2"
-        },
-        {
-            "name": "Java Blue-Gray",
-            "value": "#557c9b"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#00b3e6"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        }
-    ],
     "files.autoSave": "afterDelay",
     "powershell.promptToUpdatePowerShell": false,
-    "peacock.affectActivityBar": false,
-    "peacock.affectStatusBar": false,
-    "peacock.affectTitleBar": false,
     "workbench.colorTheme": "Cobalt2",
     "synthwave84.disableGlow": true,
     "editor.fontLigatures": false,
     "workbench.colorCustomizations": {
-        "editor.findMatchHighlightBackground": "#f3e30895"
-    }
+        "editor.findMatchHighlightBackground": "#f3e30895",
+            "scrollbarSlider.activeBackground": "#92b6cf80",
+            "scrollbarSlider.background": "#6e9ab980",
+            "scrollbarSlider.hoverBackground": "#8aafc980"
+            },
+    
+    "workbench.editor.labelFormat": "medium",
+    "linkRecommender.CurrentDocSet": "Windows Driver"
 }
 
