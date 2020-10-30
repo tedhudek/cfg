@@ -1,6 +1,6 @@
 {
     "customizeUI.stylesheet": {
-        ".editor-actions": "display: none !important;",
+        ".editor-actions": "display: none !important;"
       },
 	"editor.wrappingColumn": 0,
     	"editor.quickSuggestions": false,
@@ -12,7 +12,6 @@
     "powershell.startAutomatically": true,
     "powershell.enableProfileLoading": true,
     "git.confirmSync": false,
-    "editor.autoClosingBrackets": false,
     "typescript.check.npmIsInstalled": false,
     "editor.wordWrap": "on",
     "workbench.startupEditor": "newUntitledFile",
@@ -51,7 +50,6 @@
     "gitlens.defaultDateStyle": "absolute",
     "gitlens.views.lineHistory.enabled": false,
     "gitlens.blame.avatars": false,
-    "gitlens.advanced.fileHistoryFollowsRenames": false,
     "gitlens.menus": {
         "editor": {
             "blame": false,
@@ -91,7 +89,7 @@
     "merge-conflict.diffViewPosition": "Below",
     "files.autoSave": "afterDelay",
     "powershell.promptToUpdatePowerShell": false,
-    "workbench.colorTheme": "Cobalt2",
+    "workbench.colorTheme": "Default Light+",
     "synthwave84.disableGlow": true,
     "editor.fontLigatures": false,
     "workbench.colorCustomizations": {
@@ -102,6 +100,25 @@
             },
     
     "workbench.editor.labelFormat": "medium",
-    "linkRecommender.CurrentDocSet": "Windows Driver"
+    "linkRecommender.CurrentDocSet": "Windows Driver",
+    "githubPullRequests.remotes": [
+        "origin",
+        "gh-public"
+    ],
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        }
+    ],
+    "json.maxItemsComputed": 8000,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.find.seedSearchStringFromSelection": false,
+    "search.maintainFileSearchCache": true,
+    "search.searchOnType": false
 }
 
