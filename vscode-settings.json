@@ -4,7 +4,7 @@
       },
 	"editor.wrappingColumn": 0,
     	"editor.quickSuggestions": false,
-            "editor.cursorBlinking": "visible",
+            "editor.cursorBlinking": "solid",
     "editor.wordBasedSuggestions": false,
     "workbench.activityBar.visible": true,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -89,7 +89,7 @@
     "merge-conflict.diffViewPosition": "Below",
     "files.autoSave": "afterDelay",
     "powershell.promptToUpdatePowerShell": false,
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Cobalt2",
     "synthwave84.disableGlow": true,
     "editor.fontLigatures": false,
     "workbench.colorCustomizations": {
