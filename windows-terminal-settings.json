@@ -54,13 +54,14 @@
     "requestedTheme" : "system",
     "showTabsInTitlebar" : true,
     "showTerminalTitleInTitlebar" : true,
+    "bellStyle": "audible",
     "profiles" : 
     [
         {
             "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "name": "Windows PowerShell",
             "commandline": "powershell.exe",
-            "backgroundImage": "C:/temp/D5B_Ho1UwAAJziI.jpg",
+            "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity" : 0.2,
             "hidden": false,
             "startingDirectory": "%USERPROFILE%",
