@@ -1,27 +1,23 @@
-// Place your key bindings in this file to overwrite the defaults
 [
     
     {
-    
-    
-
     "key":     "ctrl+shift+s",
-    "command": "workbench.action.files.saveAll" ,
+    "command": "workbench.action.files.saveAll"
+    },
+
+    {
+    "key":    "ctrl+`",
+    "command":  "workbench.action.terminal.focus",
+    "when":   "!terminalFocus"
+     },
     
-    "key":
-    "ctrl+`",
-    "command":
-    "workbench.action.terminal.focus",
-    "when":
-    "!terminalFocus"
+     {
+     "key": "f12", 
+     "command": "markdown.showPreviewToSide",
+     "when": "editorFocus"
      },
 
-    
-     { "key": "f12", 
-      "command": "markdown.showPreviewToSide",
-     "when": "editorFocus" },
-
-     { "key": "f10", 
+     { "key": "ctrl+alt+p", 
       "command": "extension.poplink",
      "when": "editorFocus" },
 
@@ -32,8 +28,32 @@
         "command": "workbench.action.moveEditorToPreviousGroup"
     },
     {
+        "key": "f11",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "f11",
+        "command": "list.collapseAll",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-list.collapseAll",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
+    },
+    {
         "key": "ctrl+alt+g",
-        "command": "gitlens.views.repositories:gitlens.focus"
+        "command": "workbench.view.extension.gitlens"
     }
 ]
     
