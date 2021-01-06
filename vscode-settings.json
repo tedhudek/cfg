@@ -6,7 +6,7 @@
     	"editor.quickSuggestions": false,
             "editor.cursorBlinking": "solid",
     "editor.wordBasedSuggestions": false,
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
     "workbench.statusBar.visible": true,
     "powershell.startAutomatically": true,
@@ -89,7 +89,6 @@
     "merge-conflict.diffViewPosition": "Below",
     "files.autoSave": "afterDelay",
     "powershell.promptToUpdatePowerShell": false,
-    "workbench.colorTheme": "Cobalt2",
     "synthwave84.disableGlow": true,
     "editor.fontLigatures": false,
     "workbench.colorCustomizations": {
@@ -119,6 +118,12 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.find.seedSearchStringFromSelection": false,
     "search.maintainFileSearchCache": true,
-    "search.searchOnType": false
+    "search.searchOnType": false,
+    "workbench.colorTheme": "Default Light+",
+
+    "workbench.preferredDarkColorTheme": "Cobalt2",
+    "sundial.nightVariable": 20,
+    "sundial.latitude": "47.60357",
+    "sundial.longitude": "-122.32945"
 }
 
