@@ -16,7 +16,7 @@
     "editor.wordWrap": "on",
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,
-    "popLink.localBasePath": "c:\\repo\\drivers\\windows-driver-docs-pr\\",
+    "popLink.localBasePath": "c:\\repo\\windows-driver-docs-pr\\windows-driver-docs-pr\\",
     "popLink.remoteBasePath": "https://docs.microsoft.com/windows-hardware/drivers/",
     "popLink.localRefPath": "c:\\repo\\wdk-ddi\\wdk-ddi-src\\content\\",
     "popLink.remoteRefPath": "https://docs.microsoft.com/windows-hardware/drivers/ddi/",
@@ -120,9 +120,9 @@
     "search.maintainFileSearchCache": true,
     "search.searchOnType": false,
     "workbench.colorTheme": "Default Light+",
-
+    
     "workbench.preferredDarkColorTheme": "Cobalt2",
-    "sundial.nightVariable": 20,
+    "sundial.nightVariable": 0,
     "sundial.latitude": "47.60357",
     "sundial.longitude": "-122.32945"
 }
